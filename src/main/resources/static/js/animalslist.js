@@ -1,7 +1,7 @@
 //var animalsListURL = '/animals-rest/index/animals';
 //Animals--------------------------------------------
 //*for Tomcat
-var animalsListURL = '/index/animals';
+var animalsListURL = '/animals';
 //listTypeOfAnimals();
 
 // Nothing to delete in initial application state
