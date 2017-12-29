@@ -65,5 +65,7 @@
 <script type="text/javascript"
         src="/webjars/js-cookie/js.cookie.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/userslist.js"></script>
+<script type="text/javascript" src="js/animalslist.js"></script>
 </body>
 </html>
