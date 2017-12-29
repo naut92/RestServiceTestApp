@@ -1,6 +1,6 @@
-/*package com.github.naut92.restservicetestapp.repository;
+package com.github.naut92.restservicetestapp.repository;
 
-import com.github.advancedscientificresearchprojects.atlant_inception.entities.UsersEntity;
+import com.github.naut92.restservicetestapp.entities.UsersEntity;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -19,4 +19,3 @@ public interface UserRepository extends PagingAndSortingRepository<UsersEntity, 
     List<UsersEntity> findByFirstnameAndLastname(String firstName, String lastName);
     UsersEntity findByEmail(String email);
 }
-*/
