@@ -10,6 +10,8 @@ Spring Data JPA(Hibernate)
 
 PostgreSQL
 
+JQuery front-client
+
 
 DB name: restservapp
 
