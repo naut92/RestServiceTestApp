@@ -1,0 +1,93 @@
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+
+facebook:
+  client:
+    clientId: 233668646673605
+    clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
+    accessTokenUri: https://graph.facebook.com/oauth/access_token
+    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://graph.facebook.com/me
+
+github:
+  client:
+    clientId: bd1c0a783ccdd1c9b9e4
+    clientSecret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+
+# ===============================
+# = vk
+# ===============================
+vk:
+  client:
+    clientId: 3697615
+    clientSecret: AlVXZFMUqyrnABp8ncuU
+    accessTokenUri: https://oauth.vk.com/access_token
+    userAuthorizationUri: https://oauth.vk.com/token?grant_type=password&client_id=3697615&client_secret=AlVXZFMUqyrnABp8ncuU&username=****&password=****&scope=*
+    #userAuthorizationUri: https://oauth.vk.com/token?grant_type=password&client_id=*&client_secret=*&username=*&password=*&scope=*
+    #https://oauth.vk.com/authorize
+
+    tokenName: code
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    grant-type: authorization_code
+    #pre-established-redirect-uri: http://localhost:8082/blank.html
+  resource:
+    userInfoUri: https://api.vk.com/method/users.get
+
+google:
+    client:
+      clientId: 145891153549-plj4krio445mg60krvre8v4k8mlkv2oo.apps.googleusercontent.com
+      clientSecret: zc21oxnqMMVzzhntbFR3y9ws
+      #${app.secret}
+      accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+      clientAuthenticationScheme: form
+      scope:
+        - openid
+        - email
+        - profile
+
+    resource:
+      userInfoUri: https://www.googleapis.com/userinfo/v2/me
+       #https://www.googleapis.com/oauth2/v3/userinfo
+      preferTokenInfo: false
+
+#linkedIn:
+#  client:
+#    clientId: 771mrzk94hye1w
+#    clientSecret: iIJFgBf9lCb18zYe
+#    accessTokenUri: https://www.linkedin.com/oauth/v2/accessToken
+#    userAuthorizationUri: https://www.linkedin.com/oauth/v2/authorization
+#  resource:
+#    userInfoUri: https://api.linkedin.com/v1/people/~?format=json
+
+#twitter:
+#  client:
+#    clientId: oXJIDGVdB0PDnMICDwKckyzKm
+#    clientSecret: Z4BpN51kNsb2wbEfzDXm40v38W3I2P1u4H6fvfM6HQraVfry5j
+#    accessTokenUri: https://api.twitter.com/oauth/access_token
+#    userAuthorizationUri: https://api.twitter.com/oauth/authorize
+#    clientAuthenticationScheme: form
+#  resource:
+#    userInfoUri:  https://api.twitter.com/1.1/users/show.json
+
+
+
+
+logging:
+  level:
+    org.springframework.security: DEBUG
