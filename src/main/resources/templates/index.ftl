@@ -19,7 +19,7 @@
 
  <div class="main-content">
 
-        <h1 id="message">SYSTEM IN DEVELOPMENT</h1>
+        <h1 id="message">REST SERVICE Test APP</h1>
 
         <div id="info">
         <div id="powered">
@@ -34,9 +34,9 @@
             </div>
         <p id="login-with">Login with:</p>
         <a class="tablet-logo" href="/login/facebook"><img class="social-network" src="/res/facebook-tablet.png"></a>
-        <a class="tablet-logo" href="/login/github"><img class="social-network" src="/res/github-tablet.png"></a>
-        <a class="tablet-logo" href="/login/vk">vk</a>
-        <a class="tablet-logo" href="/login/google">google</a>
+        <a class="tablet-logo" href="/login/github"><img class="social-network" src="/res/github.png"></a>
+        <a class="tablet-logo" href="/login/google"><img class="social-network" src="/res/google.png"></a>
+        <a class="tablet-logo" href="/login/vk"><img class="social-network" src="/res/vk.png"></a>
         <!--a class="tablet-logo" href="/login/linkedIn">linkedIn</a>
         <a class="tablet-logo" href="/login/twitter">twitter</a-->
         </div>
