@@ -1,76 +1,32 @@
 package com.github.naut92.restservicetestapp.entities;
 
+import lombok.NonNull;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "animals", schema = "public", catalog = "restservapp")
-public class AnimalsEntity {
-    private int id;
-    private String animalname;
-    private String sex;
-    private String dateborn;
+public class AnimalsEntity implements Serializable{
+    private static final long serialVersionUID = 1L;
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Basic
-    @Column(name = "animalname", nullable = false, length = -1)
-    public String getAnimalname() {
-        return animalname;
-    }
-
-    public void setAnimalname(String animalname) {
-        this.animalname = animalname;
-    }
+    @Column(name = "animalname")
+    @NonNull
+    private String animalname;
 
     @Basic
-    @Column(name = "sex", nullable = false, length = -1)
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
+    @Column(name = "sex")
+    @NonNull
+    private String sex;
 
     @Basic
-    @Column(name = "dateborn", nullable = true, length = 255)
-    public String getDateborn() {
-        return dateborn;
-    }
+    @Column(name = "dateborn")
+    private String dateborn;
 
-    public void setDateborn(String dateborn) {
-        this.dateborn = dateborn;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        AnimalsEntity that = (AnimalsEntity) o;
-
-        if (id != that.id) return false;
-        if (animalname != null ? !animalname.equals(that.animalname) : that.animalname != null) return false;
-        if (sex != null ? !sex.equals(that.sex) : that.sex != null) return false;
-        if (dateborn != null ? !dateborn.equals(that.dateborn) : that.dateborn != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (animalname != null ? animalname.hashCode() : 0);
-        result = 31 * result + (sex != null ? sex.hashCode() : 0);
-        result = 31 * result + (dateborn != null ? dateborn.hashCode() : 0);
-        return result;
-    }
 }

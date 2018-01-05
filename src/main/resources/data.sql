@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS log;
 DROP TABLE IF EXISTS test;
 
-DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS sms;
 DROP TABLE IF EXISTS roles;
 
 --USER TABLE
@@ -19,10 +19,21 @@ CREATE TABLE IF NOT EXISTS users (
   OIDS=FALSE
 );
 
+--SMS TABLE
+CREATE TABLE IF NOT EXISTS sms (
+  id SERIAL NOT NULL UNIQUE,
+  fromwhom VARCHAR(255) NOT NULL,
+  totf VARCHAR(255) NOT NULL,
+  textsms VARCHAR(255) NOT NULL,
+  CONSTRAINT sms_pk PRIMARY KEY (id)
+) WITH (
+OIDS=FALSE
+);
+
 --LOG TABLE
 CREATE TABLE IF NOT EXISTS log (
   id SERIAL NOT NULL UNIQUE,
-  logstring VARCHAR(1000) NULL,
+  logstring VARCHAR(1000) NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -64,6 +75,9 @@ INSERT INTO users (firstname, lastname, email, dateborn) VALUES
   ('user5-fn', 'user5-ln', 'email5@email.com', '1993-05-05'),
   ('user6-fn', 'user6-ln', 'email6@email.com', '1994-06-06'),
   ('user7-fn', 'user7-ln', 'email7@email.com', '1995-07-07');
+
+INSERT INTO sms (fromwhom, totf, textsms) VALUES
+  ('InfoSMS RestServiceTestApp', '38267427802', 'Test SMS');
 
 INSERT INTO typesanimals (typeanimal) VALUES
   ('cat'),
