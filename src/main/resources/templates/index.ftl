@@ -56,7 +56,10 @@
         <button onClick="logout()" class="btn btn-primary">Logout</button>
     </div>
     <div>
-        Авторизованный контент
+        Авторизованный контент:
+        <div>
+            <button onClick="sms()" class="btn btn-primary" id="btnPOSTsms">Send SMS</button>
+        </div>
     </div>
 </div>
 
