@@ -11,7 +11,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Entity
 @Table(name = "sms", schema = "public", catalog = "restservapp")
-
 public class ClientSMSEntity implements Serializable{
     private static final long serialVersionUID = 1L;
 
@@ -36,4 +35,9 @@ public class ClientSMSEntity implements Serializable{
     @NonNull
     private String textsms;
 
+    public ClientSMSEntity(String fromwhom, String totf, String textsms) {
+        this.fromwhom = fromwhom;
+        this.totf = totf;
+        this.textsms = textsms;
+    }
 }
